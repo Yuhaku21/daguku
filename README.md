@@ -4,4 +4,4 @@
 2. Manajemen Admin (kelola orderan dan kelola penghasilan).
 3. Kelola Orderan (khusus penjoki)
 4. Check Pendapatan Bersih
-5. Ambil Bonus DM
+5. Buat Saran
