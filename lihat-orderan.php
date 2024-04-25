@@ -51,6 +51,11 @@
         ?>
       </tbody>
     </table>
+    <!--Link-->
+    <div class="container text-center">
+      <a href="ambil-orderan.html" class="btn btn-success" style="font-size: 24px;">Ambil Orderan</a>
+    </div>
+    <!--Link-->
   </div>
 </body>
 </html>

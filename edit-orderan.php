@@ -25,24 +25,43 @@ mysqli_close($koneksi);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Orderan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Edit Orderan</h1>
-  <form action="proses_edit.php" method="POST">
-    <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
-    <label for="kode">Kode:</label><br>
-    <input type="text" id="kode" name="kode" value="<?php echo $data['kode']; ?>"><br>
-    <label for="akun">Akun:</label><br>
-    <input type="text" id="akun" name="akun" value="<?php echo $data['akun']; ?>"><br>
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" value="<?php echo $data['password']; ?>"><br>
-    <label for="pesanan">Pesanan:</label><br>
-    <input type="text" id="pesanan" name="pesanan" value="<?php echo $data['pesanan']; ?>"><br>
-    <label for="catatan">Catatan:</label><br>
-    <input type="text" id="catatan" name="catatan" value="<?php echo $data['catatan']; ?>"><br>
-    <label for="rate">Rate:</label><br>
-    <input type="number" id="rate" name="rate" value="<?php echo $data['rate']; ?>"><br><br>
-    <input type="submit" value="Simpan Perubahan">
-  </form>
+  <div class="container mt-5">
+    <h1>Edit Orderan</h1>
+    <div class="card">
+      <div class="card-body">
+      <form action="proses_edit.php" method="POST">
+      <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+      <div class="mb-3">
+        <label for="kode" class="form-label">Kode:</label>
+        <input type="text" class="form-control" id="kode" name="kode" value="<?php echo $data['kode']; ?>">
+      </div>
+      <div class="mb-3">
+        <label for="akun" class="form-label">Akun:</label>
+        <input type="text" class="form-control" id="akun" name="akun" value="<?php echo $data['akun']; ?>">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" value="<?php echo $data['password']; ?>">
+      </div>
+      <div class="mb-3">
+        <label for="pesanan" class="form-label">Pesanan:</label>
+        <input type="text" class="form-control" id="pesanan" name="pesanan" value="<?php echo $data['pesanan']; ?>">
+      </div>
+      <div class="mb-3">
+        <label for="catatan" class="form-label">Catatan:</label>
+        <input type="text" class="form-control" id="catatan" name="catatan" value="<?php echo $data['catatan']; ?>">
+      </div>
+      <div class="mb-3">
+        <label for="rate" class="form-label">Rate:</label>
+        <input type="number" class="form-control" id="rate" name="rate" value="<?php echo $data['rate']; ?>">
+      </div>
+      <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+    </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
