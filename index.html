@@ -40,21 +40,41 @@
       .card:hover .card-body {
         border: 1px solid black;
       }
+
+      #typed-text b::after {
+        content: "|";
+        animation: blink-caret 0.75s step-end infinite;
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
+      }
     </style>
   </head>
   <body>
     <!--Daftar-->
     <div class="alert alert-success" role="alert">
       <marquee>
-        Mau jadi Penjoki ? <span style="color: blue"><a href="" style="color: blue">Daftar Disini</a></span>
+        Mau jadi Penjoki / Staff ? <span style="color: blue"><a href="daftar.html" style="color: blue">Daftar Disini</a></span>
       </marquee>
     </div>
     <!--Daftar-->
     <!--Hero-->
     <div class="logo mt-5">
       <img src="logo daguku.png" alt="" />
-      <h1 class="text-center mt-4" style="border-bottom: 2px solid rgb(188, 188, 188); padding-bottom: 10px; margin-left: 40px; margin-right: 40px"><b>Daguku Store</b></h1>
-      <p class="text-center">Made By Yuhaku21</p>
+      <h1 class="text-center mt-4" style="border-bottom: 2px solid rgb(188, 188, 188); padding-bottom: 10px; margin-left: 40px; margin-right: 40px">
+        <b><span id="typed-cursor"></span><span id="typed-text"></span></b>
+      </h1>
+      <div class="container">
+        <h6 class="text-center" id="greeting">Hi Admin!</h6>
+        <h5 id="tampiljam" class="text-center"></h5>
+      </div>
     </div>
     <!--Hero-->
     <!--Link-->
@@ -66,7 +86,7 @@
       </div>
       <div class="card mt-4">
         <div class="card-body text-center">
-          <a href="lihat-orderan.html"><b>Lihat Orderan</b></a>
+          <a href="lihat-orderan.php"><b>Lihat Orderan</b></a>
         </div>
       </div>
       <div class="card mt-4">
@@ -81,7 +101,7 @@
       </div>
       <div class="card mt-4">
         <div class="card-body text-center">
-          <a href="#"><b>Check Pendapatan</b></a>
+          <a href="#"><b>Daftar Penjoki dan Staff</b></a>
         </div>
       </div>
       <div class="card mt-4">
@@ -92,6 +112,8 @@
     </div>
     <!--Link-->
     <div class="spacer mb-5"></div>
+    <script src="greeting.js"></script>
+    <script src="clock-index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
